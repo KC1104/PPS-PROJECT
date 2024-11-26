@@ -10,7 +10,7 @@
 int event_ids[MAX_EVENTS];
 char event_names[MAX_EVENTS][MAX_STRING_LEN];
 char event_dates[MAX_EVENTS][MAX_STRING_LEN];
-int event_count = 1; // Counter for events
+int event_count = 1;
 
 // Separate arrays for attendees
 char attendee_names[MAX_ATTENDEES][MAX_STRING_LEN];
@@ -66,7 +66,7 @@ void search_attendee(char *event_name) {
     int found = 0;
 
     printf("Enter the name of the attendee you want to search: ");
-    getchar(); // Clear the input buffer
+    getchar(); 
     fgets(search_name, MAX_STRING_LEN, stdin);
     search_name[strcspn(search_name, "\n")] = 0;
 
@@ -95,9 +95,9 @@ void add_event() {
     char event_name[MAX_STRING_LEN], event_date[MAX_STRING_LEN];
 
     printf("\nEnter event name: ");
-    getchar(); // Clear the input buffer
+    getchar();
     fgets(event_name, MAX_STRING_LEN, stdin);
-    event_name[strcspn(event_name, "\n")] = 0; // Remove newline character
+    event_name[strcspn(event_name, "\n")] = 0;
 
     printf("Enter event date (DD/MM/YYYY): ");
     fgets(event_date, MAX_STRING_LEN, stdin);
